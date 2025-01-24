@@ -2,3 +2,4 @@
 venv/
 frontend/
 .env
+core/*/__pycache__/*.pyc
