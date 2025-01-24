@@ -1,3 +1,11 @@
 .venv/
 venv/
 core/*/__pycache__/
+__pycache__/
+*.py[cod]
+
+# Ignore environment files
+*.env
+
+# Ignore Django migrations
+*.pyc
