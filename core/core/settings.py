@@ -11,8 +11,8 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-# SECRET_KEY = "django-insecure-#k!2c+@pd!s7%v&p6%rm!o7%o-!x!iu-&vnz5k!yb5u_knv++g"
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = "django-insecure-#k!2c+@pd!s7%v&p6%rm!o7%o-!x!iu-&vnz5k!yb5u_knv++g"
+# SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG')
@@ -115,16 +115,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/images/"
 
-STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_ROOT = BASE_DIR / "static/images"
 # Default primary key field type
