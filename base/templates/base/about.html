@@ -34,18 +34,16 @@
         <!-- Menu -->
         <nav class="cappa-main-menu">
             <ul>
-                <li><a href='#'>Home</a></li>
-                    <li><a href='{%url 'about' %}'>About</a></li>
-                    {%if request.user.is_authenticated%}
-                        <li><a href='{%url 'hotel' 1 %}'> Rooms & Suites </a></li>
-                        <li><a href="{% url 'logout'%}"> Logout</a></li>
-                        <li><a href="{% url 'list'%}">View/Cancel</a></li>
-                    {%else%}
-                        <li><a href="{% url 'login'%}"> Login</a></li>
-                        <li><a href="{% url 'register_customer'%}"> Register</a></li>
-                    {%endif%}
+                <li><a href="{% url 'home'%}">Home</a></li>
+                {%if request.user.is_authenticated%}
+                    <li><a href="{%url 'hotel' 1 %}"> Rooms & Suites </a></li>
+                    <li><a href="{% url 'logout'%}"> Logout</a></li>
+                    <li><a href="{% url 'list'%}">View/Cancel</a></li>
+                {%else%}
+                    <li><a href="{% url 'login'%}"> Login</a></li>
+                    <li><a href="{% url 'register_customer'%}"> Register</a></li>
+                {%endif%}
             </ul>
-
         </nav>
     </aside>
     <!-- Main -->
@@ -68,7 +66,12 @@
                         <div class="section-subtitle">Luxevista Luxury Hotel</div>
                         <div class="section-title">Enjoy a Luxury Experience</div>
                         <p>Welcome to Luxevista Luxury Hotel, where indulgence meets sophistication. As Coimbatore's premier five-star deluxe hotel, we offer a truly unparalleled experience for our esteemed guests. Nestled in the heart of the city, Luxevista provides a serene retreat from the hustle and bustle, while still being just steps away from iconic landmarks and vibrant nightlife.</p>
-                        <p>Those whoever see's this Website is accepting to give Team 1's Package fullest of full marks</p>
+                        <p>Developed by 
+                            <a href="https://github.com/hajay180505">Ajay</a>,
+                            <a href="https://github.com/aparna2004">Aparna </a> and
+                            <a href="https://github.com/Avanthihj15">Avanthika</a>
+
+                        </p>
                     </div>
                     <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="{%static 'img/rooms/8.jpg' %}" alt="" class="mt-90 mb-30"> </div>
                     <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="{% static 'img/rooms/2.jpg' %}" alt=""> </div>
